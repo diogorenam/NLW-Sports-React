@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
+*{
+  margin:0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Imagem de fundo  */
+body{
+  background-image: url(./components/assets/Fundo.jpg);
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #121214;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header{
+  margin-top: 32px;
+  height: calc(120px + 32px);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header img{
+  width: 100%;
+  border-radius:50%;
+  cursor: pointer;
+}
+header div{
+  max-width:120px;
+  margin:auto;
+  background: linear-gradient(315deg, #00ccff, #d400d4);
+  border-radius:50%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 4px;
+  
+}
+
+header h3{
+  text-align: center;
   color: white;
+  font-weight: 900;
+  font-family: 'Inter', sans-serif;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+ul{
+  list-style: none;
+}
+/* Text da pagina */
+body * {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  line-height: 160%;
+}
+section{
+  color:#fff;
+  background: linear-gradient(315deg, #00ccff, #d400d4);
+  padding-top: 4px;
+  border-radius: 10px;
+}
+section h2{
+  letter-spacing: -0.47px;
+}
+section p{
+  color: #A1A1AA;
+  line-height: 160%;
+  letter-spacing: -0.18px;
+
+}
+section div{
+  background-color: #2A2634;
+  padding:32px;
+  padding-top: 24px;
+  border-radius: 8px;
+ 
+}
+.section-filmes img{
+  width: 110px;
+  height: 130px;
+  border-radius: 4px;
+  transition: transform .3s;
+  cursor: pointer;
+}
+.section-canais img{
+  border-radius: 50%;
+  border: 1px solid #443E54;
+  width:90px;
+  transition: transform .3s;
+}
+.section-filmes img:hover,
+.section-social i:hover,
+.section-canais img:hover{
+  transform: scale(1.2);
+}
+ul{
+  display:flex;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  
+}
+main{
+  max-width: 580px;
+  width:90%;
+  margin:32px auto;
+  display:grid;
+  gap:24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Lista das redes socias */
+i{
+font-size:30px;  
+
+}
+#linkedin {
+  color: #9A35FF;
+}
+#instagram{
+  color:#FA41FE;
+}
+#github{
+  color:#2871FF;
+}
+#twitch{
+  color:#F40000;
+}
+
+/* ANIMATION */
+header div{
+  animation: fromTop .5s .2s backwards;
+}
+main section{
+  animation: fromBotton .8s backwards;
+}
+main section:nth-child(1){
+  animation-delay: .0s;
+}
+main section:nth-child(2){
+  animation-delay: .4s;
+}
+main section:nth-child(3){
+  animation-delay: .8s;
+}
+@keyframes fromTop {
+  from{
+      opacity: 0;
+      transform: translateY(-30px)
   }
-  to {
-    transform: rotate(360deg);
+  top{
+      opacity:1;
+      transform: translateY(0);
   }
 }
+
+@keyframes fromBotton{
+  from{
+      opacity: 0;
+      transform: translateX(-30px)
+  }
+  top{
+      opacity:1;
+      transform: translateX(0);
+  }
+}
+
