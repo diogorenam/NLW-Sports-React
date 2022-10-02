@@ -1,14 +1,14 @@
 
-const ListIten = (props)=> {
+const ListItem = (props)=> {
     return(
-        <div>
           <li>
             <a href={props.url} target="_blank" rel="noreferrer">
             <img src={props.imgUrl}
             alt={props.imgDescription}/>
+            <i id={props.nome} class={props.classimgsocial}></i>
             </a>
          </li>
-        </div>
+       
     );
 }
-export default ListIten;
+export default ListItem;

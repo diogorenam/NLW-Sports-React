@@ -80,6 +80,7 @@ section div{
   border-radius: 50%;
   border: 1px solid #443E54;
   width:90px;
+  height: 90px;
   transition: transform .3s;
 }
 .section-filmes img:hover,

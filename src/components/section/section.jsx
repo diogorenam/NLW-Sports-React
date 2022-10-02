@@ -5,7 +5,8 @@ const Section = (props)=>{
         <section className="section-filmes">
             <div>
                 <h2>{props.title}</h2>
-                    <p>{props.subtitle}</p>
+                <p>{props.subtitle}</p>
+               <ul className={props.className}>{props.children}</ul>
                
             </div>
         </section>
