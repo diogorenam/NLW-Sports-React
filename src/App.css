@@ -84,7 +84,6 @@ section div{
   transition: transform .3s;
 }
 .section-filmes img:hover,
-.section-social i:hover,
 .section-canais img:hover{
   transform: scale(1.2);
 }
@@ -103,23 +102,11 @@ main{
   gap:24px;
 }
 
-/* Lista das redes socias */
-i{
-font-size:30px;  
+.section-list img{
+  width: 70px;
+  height: 70px;
+}
 
-}
-#linkedin {
-  color: #9A35FF;
-}
-#instagram{
-  color:#FA41FE;
-}
-#github{
-  color:#2871FF;
-}
-#twitch{
-  color:#F40000;
-}
 
 /* ANIMATION */
 header div{

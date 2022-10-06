@@ -1,5 +1,6 @@
 
 import './App.css';
+
 import Header from './components/header/Header';
 import ListItem from './components/ListItems/Listitems';
 import Section from './components/section/section';
@@ -14,7 +15,7 @@ const jogosList = [
   imgDescription:"Imagem do jogo Temple run",
   },
   {
-  imgUrl:"https://lh5.googleusercontent.com/proxy/qkT8swD0_0W6tIQteVFfjs_YPIZ8xu-DDrcKmmQ23uNRam_3l8dR7uR75bkrVOw3V4Bh7qOjj926X1HHXgJkI2vHYC1t2uVC3mg58TgR3eIE9D2V9F_MPss=w1200-h630-p-k-no-nu",
+  imgUrl:"https://cdn.jogos360.com.br/fi/re/fireboy-e-watergirl-in-the-forest-temple-d.jpg",
   imgDescription:"Imagem do jogo água e fogo",
   }
 ]
@@ -47,23 +48,16 @@ const CanaisList= [
                    
 ]
 const SocialList =[
-{
+  {
   url:"https://www.instagram.com/renam_diogodev/",
-  nome:"instagram",
-  classimgsocial:"fa-brands fa-instagram",
-        
-}              
-                   
-//  <a href="https://www.twitch.tv/diogorennam" target="_blank">
-//  <i id="twitch" class="fa-brands fa-twitch"></i>         
-                  
-                  
-//  <a href="https://www.linkedin.com/in/diogo-rennam/" target="_blank">
-//  <i id="linkedin" class="fa-brands fa-linkedin"></i>
-                   
-                  
-//  <a href="https://github.com/diogorenam" target="_blank">
-//   <i id="github" class="fa-brands fa-github"></i>
+  imgUrl: "/assets/instagram.svg",
+  imgDescription:"logo instagram"      
+  },
+  {
+    url:"https://www.twitch.tv/diogorennam",
+    imgUrl:"/assets/twitch.svg",
+    imgDescription:"logo twitch"
+  }           
                        
  ]                  
 function App() {
@@ -106,13 +100,14 @@ function App() {
         <Section
         title="Minhas Redes!"
         subtitle="Venha se conectar comigo!"
+        className="section-list"
         >
           {
             SocialList.map(function(item){
               return <ListItem
               url={item.url}
-              nome={item.nome}
-              classimgsocial={item.classimgsocial}
+              imgUrl={item.imgUrl}
+              
               />
             })
           }
